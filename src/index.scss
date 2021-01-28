@@ -1,0 +1,333 @@
+html, body {
+    color: #333333;
+}
+.flexBox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.inlineFlexBox{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;    
+}
+/* .flexBox > * {
+    display: block;
+} */
+/* 主轴居中 */
+.fmc {
+    @extend .flexBox;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+/* 主轴start对齐 */
+.fms {
+    @extend .flexBox;
+    -webkit-box-pack: start;
+    -moz-justify-content: start;
+    -webkit-justify-content: start;
+    justify-content: start;
+}
+/* 主轴两端对齐 */
+.fmb {
+    @extend .flexBox;
+    -webkit-box-pack: justify;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.fma {
+    @extend .flexBox;
+    /* -webkit-box-pack: justify; */
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+.fme {
+    @extend .flexBox;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+/* 侧轴居中 */
+.fvc {
+    @extend .flexBox;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.fvs {
+    @extend .flexBox;
+    -webkit-box-align: start;
+    -moz-align-items: start;
+    -webkit-align-items: flex-start;
+    align-items: start;
+}
+
+.fve {
+    @extend .flexBox;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+
+/* 主轴从上到下 */
+.fmtb {
+    @extend .flexBox;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+/*侧轴对齐*/
+.flexVStart{
+    @extend .flexBox;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+/* 主轴从下到上 */
+.fmbt {
+    @extend .flexBox;
+    -webkit-box-pack: end;
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+/* 主轴从左到右 */
+/* .flexMLeftRight {
+    @extend .flexBox;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+} */
+/* 主轴从右到左 */
+.fmlr {
+    @extend .flexBox;
+    -webkit-box-pack: end;
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+
+/* 主轴从右到左 */
+/* .flexMRightLeft {
+    @extend .flexBox;
+    -webkit-box-pack: end;
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+} */
+/* 主轴从右到左 */
+.fmrl {
+    @extend .flexBox;
+    -webkit-box-pack: end;
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+.hideScrollBar::-webkit-scrollbar { 
+    width: 0 !important ;
+}
+.tdHideScroll {
+    overflow-x: scroll;
+}
+.tdHideScroll::-webkit-scrollbar {
+    width: 0 ;
+}
+
+.customScrollBar{
+    overflow: scroll;
+/* margin-right: calc(100% - 100vw); */
+    margin-right: 5px;
+
+}
+.customScrollBar::-webkit-scrollbar-thumb {
+    border-top-left-radius: 6px 3px;
+    border-top-right-radius: 6px 3px;
+    border-bottom-right-radius: 6px 3px;
+    border-bottom-left-radius: 6px 3px;
+}
+.customScrollBar:hover::-webkit-scrollbar-thumb {
+    background: rgb(210, 210, 210);
+    border-top-left-radius: 6px 3px;
+    border-top-right-radius: 6px 3px;
+    border-bottom-right-radius: 6px 3px;
+    border-bottom-left-radius: 6px 3px;
+}
+.customScrollBar::-webkit-scrollbar-thumb:hover {
+    background: rgb(186, 186, 186);
+}
+.customScrollBar::-webkit-scrollbar {
+    width: 7px;
+}
+/* .customScrollBar::-webkit-scrollbar-track-piece { */
+/* background: transparent; */
+/* background: blue; */
+/* } */
+.pointer {
+    cursor: pointer;
+}
+
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+}
+
+.shallowShadow {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px;
+}
+
+.bottomPinkShadow {
+    box-shadow: rgba(255,175,179, 0.6) 0px 10px 10px -10px;
+    -webkit-box-shadow: rgba(255,175,179, 0.3) 0px 10px 20px -5px;
+    -moz-box-shadow: rgba(255,175,179, 0.6) 0px 10px 10px -10px;
+
+}
+
+.notSelect{
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    -khtml-user-select:none;
+    user-select:none;
+}
+
+
+.visible {
+    visibility: visible;
+}
+.notVisible {
+    visibility: hidden;
+}
+.initTextarea {
+    /* font-size: 12px; */
+    border: 0px;
+    outline: none;
+    /* height: 85px; */
+    /* width: 100%; */
+    resize: none;
+    line-height: 16px;
+}
+.initInput {
+    background:none;  
+    outline:none;  
+    border:none;
+}
+/* 自动换行，包括英文 */
+.breakAll {
+    word-break:break-all;
+}
+/* 超过的以......显示 */
+.ellipsis {
+    /* width: 100px; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+/* font-size: 16px; */
+}
+.twoLineEllipsis {
+    
+    text-overflow: ellipsis;	
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break:break-all;
+}
+
+/* 使用translate水平垂直居中 */
+  .translateCenter {
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+}
+
+.SimHei {
+    font-family:"SimHei",SimHei;
+}
+
+.pink {
+    color: #FF4D43;
+}
+
+.commonBorder {
+    border: 0.6px solid #ccc;
+}
+
+/* .commonBottomBorder {
+    border-bottom: 0.6px solid #ccc;
+
+
+} */
+
+.hoverBlue:hover {
+    color: rgb(23,81,153);
+}
+
+.bg03s{
+    transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
+}
+img[src=""]{
+    opacity: 0;
+}
+
+.errColor {
+    color: #f1403c !important;
+}
+
+a {
+    color: #333333;
+
+    &:hover{
+        color: #2b71c3;
+    }
+
+    transition: color .3s;
+}
+
+$borderColor: #d6d6d6;
